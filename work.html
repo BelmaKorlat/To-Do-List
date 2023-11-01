@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work List</title>
+    <link rel="stylesheet" href="styleToday.css">
+</head>
+
+<body>
+    <div class="BackAndTitle">
+        <a href="index.html"><button class="btnBack">BACK</button></a>
+        <h2>WORK LIST</h2>
+    </div>
+    <div class="today">
+        <table id="tablee">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TASK</th>
+                    <th>CHECK</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        <div class="addTask">
+            <input type="text" name="todoId" id="todoId" class="inp" placeholder="Enter Id" autocomplete="off">
+            <input type="text" name="todoTask" id="todoTask" class="inp" placeholder="Enter Task" autocomplete="off">
+            <button onclick="addData()" class="btn">ADD</button>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
