@@ -14,6 +14,7 @@ function addData() {
     newRow.insertCell(4).innerHTML = '<button onclick="deleteData(this)">DELETE</button>';
 
     clearInputs();
+    saveData();
 }
 
 function clearInputs() {
@@ -42,6 +43,8 @@ function edit(button) {
     // Update the cell contents with the new values 
     idCell.innerHTML = idInput;
     taskCell.innerHTML = taskInput;
+
+    saveData();
 }
 
 function deleteData(button) {
@@ -49,7 +52,18 @@ function deleteData(button) {
     let row = button.parentNode.parentNode;
 
     row.parentNode.removeChild(row);
+    saveData();
 }
+
+function saveData() {
+    localStorage.setItem("data", document.getElementById("tableBody").innerHTML);
+}
+
+function showTask() {
+    document.getElementById("tableBody").innerHTML = localStorage.getItem("data");
+}
+
+showTask();
 
 //Adding current date
 function getDayAsString(day) {
