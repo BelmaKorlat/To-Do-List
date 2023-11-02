@@ -1,40 +1,118 @@
 body {
-    background-color: #000000;
-    color: #F6F1F1;
-    height: 100vh;
+    background-color: black;
+    color: white;
     margin: 0;
-    text-align: center;
+    padding: 0;
+    height: 100vh;
 }
 
-.welcome {
-    height: 98vh;
+.BackAndTitle {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+.btnBack {
+    width: 110%;
+    border-radius: 80%;
+    height: 50px;
+    margin-top: 8px;
+    letter-spacing: 0;
+}
+
+.today {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    height: 98vh;
 }
 
 h1 {
-    margin-bottom: 50px;
+    border-bottom: 2px solid #19A7CE;
+    border-radius: 4px;
+}
+
+table {
+    margin-top: 50px;
+    table-layout: fixed;
+    width: 60%;
+    border-collapse: collapse;
+    border: 3px solid #19A7CE;
+    text-align: center;
+}
+
+thead th {
+    width: 30%;
+    font-size: 1.5rem;
+}
+
+th,
+td {
+    padding: 20px;
+}
+
+thead {
+    background: url(images/blue-texture.jpg);
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 1px #F6F1F1;
+    letter-spacing: 3px;
+}
+
+thead th {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.5));
+    border: 3px solid #19A7CE;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #19A7CE;
+    font-size: 1.3rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #146C94;
+    background: linear-gradient(to bottom,
+            #146C94,
+            rgba(50, 48, 48, 0.5));
+    font-size: 1.3rem;
+}
+
+.addTask {
+    margin-top: 5px;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #19A7CE;
+}
+
+.inp {
+    width: 75%;
+    background-color: black;
+    color: #19A7CE;
+    padding: 10px;
+    letter-spacing: 2px;
+    border: none;
+}
+
+#todoId {
+    margin-right: 5px;
+    border-right: 1px solid #19A7CE;
+}
+
+#todoIdWork {
+    margin-right: 5px;
+    border-right: 1px solid #19A7CE;
 }
 
 .btn {
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-button {
+    width: 30%;
     border: none;
-    padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
     background: #146C94;
     color: #F6F1F1;
     letter-spacing: 4px;
-    box-shadow: 0 5px 15px #146C94;
-    border-radius: 4px;
-    font-size: 1.2rem;
     transition-duration: 0.4s;
     font-weight: bold;
 }
@@ -42,27 +120,170 @@ button {
 button:hover {
     cursor: pointer;
     background: #fff;
-    box-shadow: 0px 2px 10px 9px #146C94;
-    color: #000;
+    color: #146C94;
+}
+
+button {
+    border: none;
+    background: #146C94;
+    color: #F6F1F1;
+    letter-spacing: 1px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+    padding: 5px;
+    width: 70%;
+}
+
+#taskCheckbox:checked+tbody tr {
+    text-decoration: line-through;
+}
+
+@media only screen and (max-width: 1500px) {
+    button {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    table {
+        width: 80%;
+    }
+
+    .addTask {
+        width: 80%;
+    }
+
+    thead th {
+        font-size: 1rem;
+    }
+
+    .BackAndTitle {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
-    h1 {
-        font-size: 1.2rem;
-    }
-
     button {
-        margin-top: 20px;
         font-size: 0.8rem;
     }
 
-    .btn {
-        flex-direction: column;
+    .BackAndTitle {
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 1.2rem
+    }
+
+    h1 {
+        font-size: 1.2rem
+    }
+
+    .btnBack {
+        height: 35px;
+        letter-spacing: 2px;
+        font-size: 0.5rem;
+    }
+
+    table {
+        width: 80%;
+    }
+
+    .addTask {
+        width: 80%;
+    }
+
+    th,
+    td {
+        padding: 10px;
     }
 }
 
-@media only screen and (max-width: 420px) {
-    .btn {
-        width: 70%;
+@media only screen and (max-width: 800px) {
+    .BackAndTitle {
+        width: 40%;
     }
+
+    .inp {
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    button {
+        width: 90%;
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .BackAndTitle {
+        width: 50%;
+    }
+
+    table {
+        width: 95%;
+    }
+
+    .addTask {
+        width: 95%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .BackAndTitle {
+        width: 60%;
+    }
+
+    thead th {
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    thead {
+        letter-spacing: 1px;
+    }
+
+    tbody tr:nth-child(odd) {
+        font-size: 0.8rem;
+    }
+
+    tbody tr:nth-child(even) {
+        font-size: 0.8rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    thead th {
+        font-size: 0.6rem;
+    }
+
+    tbody tr:nth-child(odd) {
+        font-size: 0.5rem;
+    }
+
+    tbody tr:nth-child(even) {
+        font-size: 0.5rem;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
 }
