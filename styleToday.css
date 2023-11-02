@@ -102,6 +102,11 @@ tbody tr:nth-child(even) {
     border-right: 1px solid #19A7CE;
 }
 
+#todoIdWork {
+    margin-right: 5px;
+    border-right: 1px solid #19A7CE;
+}
+
 .btn {
     width: 30%;
     border: none;
