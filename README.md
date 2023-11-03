@@ -3,7 +3,7 @@
 This project is a simple ToDoList application built using HTML, CSS, and JavaScript, similar to my previous ToDoList (https://github.com/BelmaKorlat/ToDoList) created using HTML, CSS, JS, Node.js, and Express. However, this version includes an additional feature, the 'Edit' button, which enables users to correct the tasks they have entered. Furthermore, it has been adapted for easy installation and usage, allowing users to install on an Android device and utilize the application effortlessly.
 
 ## Downloading and viewing the project
-To view the website, please visit the following link: https://github.com/BelmaKorlat/To-Do-List
+To view the website, please visit the following link: [https://github.com/BelmaKorlat/To-Do-List](https://belmakorlat.github.io/To-Do-List/)
 
 To use this application, download the .apk file from the provided link and install it on your Android device. Please ensure that your Android device is capable of installing APK files before proceeding.
 
